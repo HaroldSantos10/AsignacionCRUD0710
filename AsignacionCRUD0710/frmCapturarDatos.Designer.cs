@@ -162,7 +162,7 @@ namespace AsignacionCRUD0710
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(677, 399);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.tbxSize);
@@ -177,6 +177,7 @@ namespace AsignacionCRUD0710
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCapturarDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Captura de Datos";
             this.Load += new System.EventHandler(this.frmCapturarDatos_Load);
             this.ResumeLayout(false);

@@ -36,6 +36,7 @@ namespace AsignacionCRUD0710
             {
                 connectionString = @"Server=localhost;Database=smis001621;
                                     Uid=root;Pwd=usbw; SSL Mode=None";
+
                 conn = new MySqlConnection(connectionString);
                 conn.Open();
                 

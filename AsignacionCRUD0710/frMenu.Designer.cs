@@ -32,6 +32,8 @@ namespace AsignacionCRUD0710
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.televisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capturarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,9 +57,26 @@ namespace AsignacionCRUD0710
             // 
             // televisorToolStripMenuItem
             // 
+            this.televisorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarRegistrosToolStripMenuItem,
+            this.capturarDatosToolStripMenuItem});
             this.televisorToolStripMenuItem.Name = "televisorToolStripMenuItem";
             this.televisorToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.televisorToolStripMenuItem.Text = "Televisor";
+            // 
+            // mostrarRegistrosToolStripMenuItem
+            // 
+            this.mostrarRegistrosToolStripMenuItem.Name = "mostrarRegistrosToolStripMenuItem";
+            this.mostrarRegistrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostrarRegistrosToolStripMenuItem.Text = "Mostrar Registros";
+            this.mostrarRegistrosToolStripMenuItem.Click += new System.EventHandler(this.mostrarRegistrosToolStripMenuItem_Click);
+            // 
+            // capturarDatosToolStripMenuItem
+            // 
+            this.capturarDatosToolStripMenuItem.Name = "capturarDatosToolStripMenuItem";
+            this.capturarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.capturarDatosToolStripMenuItem.Text = "Capturar Datos";
+            this.capturarDatosToolStripMenuItem.Click += new System.EventHandler(this.capturarDatosToolStripMenuItem_Click);
             // 
             // frMenu
             // 
@@ -83,5 +102,7 @@ namespace AsignacionCRUD0710
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem televisorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarRegistrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem capturarDatosToolStripMenuItem;
     }
 }

@@ -29,5 +29,19 @@ namespace AsignacionCRUD0710
             frm.MdiParent = this;//definir el formulario padre
             frm.Show();//mostrar el formulario
         }
+
+        private void mostrarRegistrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarDatos frm = new frmMostrarDatos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void capturarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCapturarDatos frm = new frmCapturarDatos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
