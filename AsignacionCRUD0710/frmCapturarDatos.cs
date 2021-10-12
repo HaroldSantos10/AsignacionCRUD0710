@@ -25,32 +25,31 @@ namespace AsignacionCRUD0710
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            
-            
-            
-            string connectionString = "";
-            MySqlConnection conn;
-
-            //manejo de excepciones 
+            MySqlConnection conexionBD = conexion.conex();
             try
             {
-                connectionString = @"Server=localhost;Database=smis001621;
-                                    Uid=root;Pwd=usbw; SSL Mode=None";
-
-                conn = new MySqlConnection(connectionString);
-                conn.Open();
-                
-
-                conn.Close();
+                conexionBD.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = conexionBD;
+                comando.CommandText = ("INSERT INTO televisor(marca,modelo,color,size,year)" +
+                    "values('" + tbxMarca.Text + "','" + tbxModelo.Text + "','" + tbxColor.Text + "'" +
+                    ",'" + Convert.ToInt32(tbxSize.Text) + "','" + tbxYear.Text + "');");
+                comando.ExecuteNonQuery();
+                conexionBD.Close();
+                MessageBox.Show("Datos registrados correctamente en la BD");
             }
-            catch (Exception Ex)
+            catch (Exception r)
             {
-                //MessageBox.Show(Ex.Message); //mensaje con el sistema normal
-                MetroFramework.MetroMessageBox.Show(this,
-                    Ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning
-                    );//mensaje usando el formato del frameWork
 
+                MessageBox.Show(r.Message + r.StackTrace);
             }
+
+            tbxMarca.Clear();
+            tbxModelo.Clear();
+            tbxColor.Clear();
+            tbxSize.Clear();
+            tbxYear.Clear();
+
         }
     }
 }
